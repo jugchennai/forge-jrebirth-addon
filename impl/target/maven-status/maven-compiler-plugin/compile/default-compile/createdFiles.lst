@@ -1,0 +1,7 @@
+org\jrebirth\forge\addon\utils\MessageUtil.class
+org\jrebirth\forge\addon\utils\TemplateSettings.class
+org\jrebirth\forge\addon\utils\JRebirthPluginUtils.class
+org\jrebirth\forge\addon\facets\impl\JRebirthFacetImpl.class
+org\jrebirth\forge\addon\ui\AbstractProjectUICommand.class
+org\jrebirth\forge\addon\facets\AbstractJRebirthFacet.class
+org\jrebirth\forge\addon\ui\setup\JRebirthSetupCommand.class
