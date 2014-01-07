@@ -28,10 +28,5 @@ public abstract class AbstractProjectUICommand extends AbstractUICommand {
        return project;
     }
 
-    @Override
-    public Metadata getMetadata()
-    {
-       return super.getMetadata().category(Categories.create("JRebirth"));
-    }
-
+   
 }
