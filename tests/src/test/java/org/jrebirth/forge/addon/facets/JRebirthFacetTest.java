@@ -14,6 +14,7 @@ import org.jboss.forge.furnace.repositories.AddonDependencyEntry;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -50,11 +51,6 @@ public class JRebirthFacetTest {
        project = projectFactory.createTempProject();
     }
 
-    @Test
-    public void testInstall()
-    {
-       facetFactory.install(project, JRebirthFacet.class);
-       Assert.assertTrue(project.hasFacet(JRebirthFacet.class));
-    }
+   
 
 }
