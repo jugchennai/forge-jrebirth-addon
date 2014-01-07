@@ -17,7 +17,8 @@ public abstract class AbstractJRebirthCommand extends AbstractProjectCommand {
     @Override
     public UICommandMetadata getMetadata(UIContext context)
     {
-        return Metadata.from(super.getMetadata(context), getClass()).category(Categories.create("JRebirth"));
+        return Metadata.from(super.getMetadata(context), getClass())
+                .category(Categories.create("JRebirth"));
     }
 
     @Override

@@ -3,17 +3,16 @@ package org.jrebirth.forge.addon.ui.setup;
 import javax.inject.Inject;
 
 import org.jboss.forge.addon.facets.FacetFactory;
-import org.jboss.forge.addon.facets.constraints.FacetConstraint;
-import org.jboss.forge.addon.projects.facets.DependencyFacet;
-import org.jboss.forge.addon.projects.facets.ResourcesFacet;
 import org.jboss.forge.addon.ui.context.UIBuilder;
 import org.jboss.forge.addon.ui.context.UIContext;
 import org.jboss.forge.addon.ui.context.UIExecutionContext;
+import org.jboss.forge.addon.ui.metadata.UICommandMetadata;
 import org.jboss.forge.addon.ui.result.Result;
 import org.jboss.forge.addon.ui.result.Results;
 import org.jboss.forge.addon.ui.util.Categories;
 import org.jboss.forge.addon.ui.util.Metadata;
 import org.jrebirth.forge.addon.ui.AbstractJRebirthCommand;
+
 
 public class JRebirthSetupWizard extends AbstractJRebirthCommand {
 
@@ -32,7 +31,7 @@ public class JRebirthSetupWizard extends AbstractJRebirthCommand {
     }
 
     @Override
-    public Metadata getMetadata(UIContext context)
+    public UICommandMetadata getMetadata(UIContext context)
     {
         return Metadata.from(super.getMetadata(context), getClass()).name("JRebirth: Setup")
                 .description("Setup JRebirth in your project")
@@ -41,7 +40,7 @@ public class JRebirthSetupWizard extends AbstractJRebirthCommand {
 
     @Override
     protected boolean isProjectRequired() {
-        return true;
+        return false;
     }
 
 }
