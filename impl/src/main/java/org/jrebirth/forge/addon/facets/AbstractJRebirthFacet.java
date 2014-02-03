@@ -57,7 +57,7 @@ public abstract class AbstractJRebirthFacet extends AbstractFacet<Project> imple
     @Override
     public boolean isInstalled()
     {
-        return true;
+        return false;
     }
 
     private void findAndinstallDependencies() {

@@ -14,6 +14,9 @@ import org.jboss.forge.addon.ui.util.Metadata;
 import org.jrebirth.forge.addon.ui.AbstractJRebirthCommand;
 
 
+
+
+
 public class JRebirthSetupWizard extends AbstractJRebirthCommand {
 
     @Inject

@@ -9,6 +9,8 @@ import org.jboss.forge.addon.ui.metadata.UICommandMetadata;
 import org.jboss.forge.addon.ui.util.Categories;
 import org.jboss.forge.addon.ui.util.Metadata;
 
+
+
 public abstract class AbstractJRebirthCommand extends AbstractProjectCommand {
 
     @Inject
@@ -18,8 +20,9 @@ public abstract class AbstractJRebirthCommand extends AbstractProjectCommand {
     public UICommandMetadata getMetadata(UIContext context)
     {
         return Metadata.from(super.getMetadata(context), getClass())
-                .category(Categories.create("JRebirth"));
+                .category(Categories.create("JBake"));
     }
+
 
     @Override
     protected ProjectFactory getProjectFactory()
