@@ -13,14 +13,9 @@
 		<dependency>
 			<groupId>org.jboss.forge.furnace.container</groupId>
 			<artifactId>cdi-api</artifactId>
-			<version>${version.furnace}</version>
 			<scope>provided</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>org.jboss.shrinkwrap.descriptors</groupId>
-			<artifactId>shrinkwrap-descriptors-impl-javaee</artifactId>
-		</dependency>
 
 		<dependency>
 			<groupId>org.jrebirth.forge.addon</groupId>
@@ -44,10 +39,6 @@
 			<artifactId>ui</artifactId>
 			<classifier>forge-addon</classifier>
 			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.freemarker</groupId>
-			<artifactId>freemarker</artifactId>
 		</dependency>
 	</dependencies>
 </project>

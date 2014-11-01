@@ -18,12 +18,7 @@
 	</modules>
 
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<shrinkwrap.descriptors.version>2.0.0-alpha-3</shrinkwrap.descriptors.version>
-		<version.jboss.spec>3.0.2.Final</version.jboss.spec>
-
-		<version.furnace>2.0.0.Final</version.furnace>
-		
+		<version.furnace>2.5.0.Final</version.furnace>
 		<maven.required.version>3.1</maven.required.version>
 		<javase.required.version>1.7</javase.required.version>
 	</properties>
@@ -36,14 +31,87 @@
 
 	<dependencyManagement>
 		<dependencies>
-		
-		
+					<dependency>
+				<groupId>org.jboss.forge.addon</groupId>
+				<artifactId>ui</artifactId>
+				<classifier>forge-addon</classifier>
+				<version>${version.furnace}</version>
+			</dependency>
 			<dependency>
-				<groupId>org.jboss.spec</groupId>
-				<artifactId>jboss-javaee-6.0</artifactId>
-				<version>${version.jboss.spec}</version>
-				<type>pom</type>
-				<scope>import</scope>
+				<groupId>org.jboss.forge.addon</groupId>
+				<artifactId>projects</artifactId>
+				<version>${version.furnace}</version>
+				<classifier>forge-addon</classifier>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.forge.addon</groupId>
+				<artifactId>parser-java</artifactId>
+				<version>${version.furnace}</version>
+				<classifier>forge-addon</classifier>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.forge.addon</groupId>
+				<artifactId>parser-xml</artifactId>
+				<version>${version.furnace}</version>
+				<classifier>forge-addon</classifier>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.forge.addon</groupId>
+				<artifactId>templates</artifactId>
+				<version>${version.furnace}</version>
+				<classifier>forge-addon</classifier>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.forge.addon</groupId>
+				<artifactId>text</artifactId>
+				<version>${version.furnace}</version>
+				<classifier>forge-addon</classifier>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.forge.addon</groupId>
+				<artifactId>core</artifactId>
+				<version>${version.furnace}</version>
+				<classifier>forge-addon</classifier>
+			</dependency>
+
+			<dependency>
+				<groupId>org.jboss.forge.addon</groupId>
+				<artifactId>maven</artifactId>
+				<version>${version.furnace}</version>
+				<classifier>forge-addon</classifier>
+			</dependency>
+
+			<dependency>
+				<groupId>org.jboss.forge.furnace.container</groupId>
+				<artifactId>cdi</artifactId>
+				<version>${version.furnace}</version>
+				<classifier>forge-addon</classifier>
+				<scope>provided</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.jboss.forge.furnace</groupId>
+				<artifactId>furnace-api</artifactId>
+				<version>${version.furnace}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.forge.furnace.container</groupId>
+				<artifactId>cdi-api</artifactId>
+				<version>${version.furnace}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.forge.furnace.test</groupId>
+				<artifactId>arquillian-furnace-classpath</artifactId>
+				<version>${version.furnace}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.forge.furnace.test</groupId>
+				<artifactId>furnace-test-harness</artifactId>
+				<version>${version.furnace}</version>
+				<scope>test</scope>
 			</dependency>
 			
 			<!-- JRebirth  -->
@@ -64,65 +132,19 @@
 				<version>${project.version}</version>
 			</dependency>
 			
-			<!-- Forge  -->
-			<dependency>
+			
+						<dependency>
 				<groupId>org.jboss.forge.addon</groupId>
-				<artifactId>ui</artifactId>
+				<artifactId>parser-xml</artifactId>
 				<classifier>forge-addon</classifier>
-				<version>${version.furnace}</version>
+				<scope>provided</scope>
 			</dependency>
 			<dependency>
-				<groupId>org.jboss.forge.addon</groupId>
-				<artifactId>projects</artifactId>
-				<version>${version.furnace}</version>
-				<classifier>forge-addon</classifier>
-			</dependency>
-			<dependency>
-				<groupId>org.jboss.forge.addon</groupId>
-				<artifactId>parser-java</artifactId>
-				<version>${version.furnace}</version>
+				<groupId>org.jboss.forge.furnace.container</groupId>
+				<artifactId>cdi</artifactId>
 				<classifier>forge-addon</classifier>
 			</dependency>
 			
-			 <dependency>
-            <groupId>org.jboss.forge.addon</groupId>
-            <artifactId>parser-xml</artifactId>
-            <version>${version.furnace}</version>
-            <classifier>forge-addon</classifier>
-         </dependency>
-         <dependency>
-            <groupId>org.jboss.forge.addon</groupId>
-            <artifactId>templates</artifactId>
-            <version>${version.furnace}</version>
-            <classifier>forge-addon</classifier>
-         </dependency>
-         <dependency>
-            <groupId>org.jboss.forge.addon</groupId>
-            <artifactId>text</artifactId>
-            <version>${version.furnace}</version>
-            <classifier>forge-addon</classifier>
-         </dependency>
-			
-			
-			<dependency>
-				<groupId>org.jboss.shrinkwrap.descriptors</groupId>
-				<artifactId>shrinkwrap-descriptors-bom</artifactId>
-				<version>${shrinkwrap.descriptors.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-			
-			
-			<dependency>
-				<groupId>org.freemarker</groupId>
-				<artifactId>freemarker</artifactId>
-				<version>2.3.20</version>
-			</dependency>
-			<dependency>
-				<groupId>junit</groupId>
-				<artifactId>junit</artifactId>
-				<version>4.11</version>
-			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
