@@ -14,6 +14,10 @@ impl/coverage.ec
 .classpath
 .project
 .settings
+api/.settings/org.eclipse.core.resources.prefs
+impl/.settings/org.eclipse.core.resources.prefs
+tests/.settings/org.eclipse.core.resources.prefs
+
 *.iml
 *.ipr
 *.iws
