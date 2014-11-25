@@ -18,7 +18,7 @@
 	</modules>
 
 	<properties>
-		<version.furnace>2.5.0.Final</version.furnace>
+		<version.furnace>2.12.2.Final</version.furnace>
 		<maven.required.version>3.1</maven.required.version>
 		<javase.required.version>1.7</javase.required.version>
 	</properties>
@@ -31,7 +31,7 @@
 
 	<dependencyManagement>
 		<dependencies>
-					<dependency>
+			<dependency>
 				<groupId>org.jboss.forge.addon</groupId>
 				<artifactId>ui</artifactId>
 				<classifier>forge-addon</classifier>
@@ -46,12 +46,6 @@
 			<dependency>
 				<groupId>org.jboss.forge.addon</groupId>
 				<artifactId>parser-java</artifactId>
-				<version>${version.furnace}</version>
-				<classifier>forge-addon</classifier>
-			</dependency>
-			<dependency>
-				<groupId>org.jboss.forge.addon</groupId>
-				<artifactId>parser-xml</artifactId>
 				<version>${version.furnace}</version>
 				<classifier>forge-addon</classifier>
 			</dependency>
@@ -113,8 +107,8 @@
 				<version>${version.furnace}</version>
 				<scope>test</scope>
 			</dependency>
-			
-			<!-- JRebirth  -->
+
+			<!-- JRebirth -->
 			<dependency>
 				<groupId>org.jrebirth.forge.addon</groupId>
 				<artifactId>jrebirth</artifactId>
@@ -131,22 +125,17 @@
 				<artifactId>forge-jrebirth-impl</artifactId>
 				<version>${project.version}</version>
 			</dependency>
-			
-			
-						<dependency>
+
+
+			<dependency>
 				<groupId>org.jboss.forge.addon</groupId>
 				<artifactId>parser-xml</artifactId>
 				<classifier>forge-addon</classifier>
 				<version>${version.furnace}</version>
 				<scope>provided</scope>
 			</dependency>
-			<dependency>
-				<groupId>org.jboss.forge.furnace.container</groupId>
-				<artifactId>cdi</artifactId>
-				<version>${version.furnace}</version>
-				<classifier>forge-addon</classifier>
-			</dependency>
-			
+
+
 		</dependencies>
 	</dependencyManagement>
 
